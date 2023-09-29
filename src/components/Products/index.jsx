@@ -2,12 +2,15 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import FormSearchProducts from '../Forms/FormSearchProducts/index';
 import Product from '../Product';
 import { getProductsBySearch } from '../../api/products';
+// import { useSearchParams } from 'react-router-dom';
 
 const Products = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+
+
 
   const handleSetSearchQuery = value => {
     setSearchQuery(value);
