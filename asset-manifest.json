@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/GO-IT-REACT-PROJECT/static/css/main.a817944b.css",
-    "main.js": "/GO-IT-REACT-PROJECT/static/js/main.1c3575a9.js",
+    "main.css": "/GO-IT-REACT-PROJECT/static/css/main.e6c13ad2.css",
+    "main.js": "/GO-IT-REACT-PROJECT/static/js/main.17c55e96.js",
+    "static/css/538.b3d73c2d.chunk.css": "/GO-IT-REACT-PROJECT/static/css/538.b3d73c2d.chunk.css",
+    "static/js/538.1057cb09.chunk.js": "/GO-IT-REACT-PROJECT/static/js/538.1057cb09.chunk.js",
     "index.html": "/GO-IT-REACT-PROJECT/index.html",
-    "main.a817944b.css.map": "/GO-IT-REACT-PROJECT/static/css/main.a817944b.css.map",
-    "main.1c3575a9.js.map": "/GO-IT-REACT-PROJECT/static/js/main.1c3575a9.js.map"
+    "main.e6c13ad2.css.map": "/GO-IT-REACT-PROJECT/static/css/main.e6c13ad2.css.map",
+    "main.17c55e96.js.map": "/GO-IT-REACT-PROJECT/static/js/main.17c55e96.js.map",
+    "538.b3d73c2d.chunk.css.map": "/GO-IT-REACT-PROJECT/static/css/538.b3d73c2d.chunk.css.map",
+    "538.1057cb09.chunk.js.map": "/GO-IT-REACT-PROJECT/static/js/538.1057cb09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a817944b.css",
-    "static/js/main.1c3575a9.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.17c55e96.js"
   ]
 }
