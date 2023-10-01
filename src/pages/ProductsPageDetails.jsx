@@ -1,4 +1,8 @@
-import { useParams } from 'react-router-dom';
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
 import { getSingleProduct } from '../api/products';
 import { useEffect, useState } from 'react';
 import Product from '../components/Product';
@@ -10,7 +14,9 @@ export const ProductsPageDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [singleProduct, setSingleProduct] = useState(null);
   const [error, setError] = useState('');
-
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log('locataion details', location);
   useEffect(() => {
     const fetchSingleProduct = async () => {
       try {
@@ -27,17 +33,25 @@ export const ProductsPageDetails = () => {
     };
     fetchSingleProduct();
   }, [productId]);
-
+  const handleClickBackBtn = () => {
+    navigate(location.state, { state: 'qwerty' });
+  };
   return (
     <SkeletonTheme baseColor="#202020" highlightColor="#444">
-      <Skeleton count={1} width={300} height={400} borderRadius={22} />
+      <button onClick={handleClickBackBtn} className="btn btn-secondary m-5">
+        {'<'}
+      </button>
       {isLoading && (
         <Skeleton count={1} width={300} height={400} borderRadius={22} />
       )}
       {error && { error }}
+      {/* {singleProduct && singleProduct.price===25 ? ( */}
       {singleProduct && <Product product={singleProduct} />}
+      {/* // ) : (
+      //   <Navigate to="/home" />
+      // )} */}
     </SkeletonTheme>
   );
-};
+}; 
 
 export default ProductsPageDetails;

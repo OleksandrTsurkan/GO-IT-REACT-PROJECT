@@ -3,16 +3,16 @@ import { useSearchParams } from 'react-router-dom';
 
 const FormSearchProducts = ({ submit }) => {
   const [searchParams, setSearchParams] = useSearchParams();
+
   const query = searchParams.get('search');
 
   const handleChange = ({ target: { value } }) => {
-    setSearchParams({ search: value });
+    value ? setSearchParams({ search: value }) : setSearchParams({});
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    const data = searchParams.get('search');
-    submit(data);
+    submit(query);
   };
 
   return (
